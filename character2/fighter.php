@@ -12,7 +12,6 @@
 		
 
 	<link rel="stylesheet" type="text/css" href="css/wb_fighter.css">
-	<link rel="stylesheet" type="text/css" href="css/wb_fighter_post.css">
     
     
     
