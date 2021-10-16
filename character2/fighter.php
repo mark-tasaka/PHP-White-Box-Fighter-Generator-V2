@@ -41,6 +41,14 @@
             $characterName = $_POST["theCharacterName"];
     
         }
+
+                
+        
+        if(isset($_POST["thePlayerName"]))
+        {
+            $playerName = $_POST["thePlayerName"];
+    
+        }
     
 
         
@@ -214,6 +222,21 @@
 <!-- JQuery -->
   <img id="character_sheet"/>
    <section>
+
+       
+   <span id="characterName">
+           <?php
+                echo $characterName;
+           ?>
+        </span>
+       
+   <span id="playerName">
+           <?php
+                echo $playerName;
+           ?>
+        </span>
+       
+       
            
 		<span id="strength"></span>
 		<span id="dexterity"></span> 
@@ -364,13 +387,6 @@
         </span>
        
 
-       
-       <span id="characterName">
-           <?php
-                echo $characterName;
-           ?>
-        </span>
-       
               
          <span id="alignment">
            <?php

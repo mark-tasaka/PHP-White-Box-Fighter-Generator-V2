@@ -171,16 +171,16 @@ body{
 
 #exNextLevel{
     position:absolute;
-    top: 240px;
-    left: 565px;
+    top: 1155px;
+    left: 80px;
 	font-size: 0.8em;
 }
 
 
 #exBonus{
     position:absolute;
-    top: 192px;
-    left: 565px;
+    top: 1155px;
+    left: 230px;
 	font-size: 0.8em;
 }
 
@@ -208,8 +208,8 @@ body{
 
 #singleSave{
     position:absolute;
-    top: 320px;
-    left: 385px;
+    top: 445px;
+    left: 125px;
 	font-size: 1.8em;
 }
 
@@ -277,6 +277,15 @@ body{
 	font-size: 1em;
 }
 
+
+#playerName{
+    position:absolute;
+    top: 225px;
+    left: 430px;
+	font-size: 1em;
+}
+
+
 #level{
     position:absolute;
     top: 140px;
@@ -306,13 +315,6 @@ body{
     position:absolute;
     top: 225px;
     left: 250px;
-	font-size: 1em;
-}
-
-#playerName{
-    position:absolute;
-    top: 145px;
-    left: 430px;
 	font-size: 1em;
 }
 
