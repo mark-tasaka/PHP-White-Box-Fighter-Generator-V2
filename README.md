@@ -5,6 +5,14 @@ The White Box Fantastic Medieval Adventure Game Fighter Character Generator (ver
 --------------------
 
 
+
+Update 1.02: 2021-10-15
+
+Added more functionality to the Fighter Character Generator.
+
+
+
+
 Update 1.01: 2021-10-14
 
 Added new character sheet and more functionality to the Fighter Character Generator.
