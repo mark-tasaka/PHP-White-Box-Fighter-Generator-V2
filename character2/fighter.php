@@ -34,6 +34,8 @@
     include 'php/movementRate.php';
     include 'php/thaco.php';
     include 'php/abilityScoreGen.php';
+    include 'php/nameSelect.php';
+    include 'php/gender.php';
     
     
         if(isset($_POST["theCharacterName"]))
@@ -41,6 +43,56 @@
             $characterName = $_POST["theCharacterName"];
     
         }
+        if(isset($_POST["theGivenName"]))
+        {
+            $givenName = $_POST["theGivenName"];
+
+        }
+
+        if($givenName == '100')
+        {
+            $givenName = rand(0, 49);
+        }
+        else
+        {
+            $givenName = $givenName;
+        }
+        
+
+
+        if(isset($_POST["theSurname"]))
+        {
+            $surname = $_POST["theSurname"];
+
+        }
+
+        if($surname == '100')
+        {
+            $surname = rand(0, 37);
+        }
+        else
+        {
+            $surname = $surname;
+        }
+
+
+
+        if(isset($_POST['theCheckBoxCustomName']) && $_POST['theCheckBoxCustomName'] == 1) 
+        {
+            $givenName = 200;
+            $surname = 200;
+            
+        } 
+        
+        if(isset($_POST["theGender"]))
+        {
+            $gender = $_POST["theGender"];
+        }
+
+        $genderName = getGenderName($gender);
+        $genderNameIdentifier = genderNameGeneration ($gender);
+
+        $fullName = getName($givenName, $surname, $genderNameIdentifier);
 
                 
         
@@ -229,12 +281,27 @@
                 echo $characterName;
            ?>
         </span>
+
+                     
+       <span id="characterName2">
+           <?php
+                echo $fullName;
+           ?>
+        </span>
+
        
    <span id="playerName">
            <?php
                 echo $playerName;
            ?>
         </span>
+       
+        <span id="gender">
+           <?php
+           echo $genderName;
+           ?>
+       </span>
+       
        
        
            
