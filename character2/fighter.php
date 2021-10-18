@@ -137,21 +137,30 @@
         
         } 
     
-    $dieType = generationMethod ($abilityScoreGen)[0];
-    $numberDie = generationMethod ($abilityScoreGen)[1];
-    $dieRemoved = generationMethod ($abilityScoreGen)[2];
-    $valueAdded = generationMethod ($abilityScoreGen)[3];
-    
-    /*
-    echo "Die Sides: " . $dieType;
-    echo "<br/>Die Numbers: " . $numberDie;
-    echo "<br/>Die removed: " . $dieRemoved;
-    echo "<br/>Value added: " . $valueAdded;
-    */
-    
-    $generationMessage = generationMesssage ($abilityScoreGen);
-    
-    
+        
+        $abilityScoreArray = array();
+        
+        for($i = 0; $i < 6; ++$i)
+        {
+            $abilityScore = rollAbilityScores ($abilityScoreGen);
+
+            array_push($abilityScoreArray, $abilityScore);
+
+        }       
+
+        $strength = $abilityScoreArray[0];
+        $dexterity = $abilityScoreArray[1];
+        $constitution = $abilityScoreArray[2];
+        $wisdom = $abilityScoreArray[3];
+        $intelligence = $abilityScoreArray[4];
+        $charisma = $abilityScoreArray[5];
+        
+        $strengthMod = getAbilityModifier($strength);
+        $dexterityMod = getAbilityModifier($dexterity);
+        $constitutionMod = getAbilityModifier($constitution);
+        $wisdomMod = getAbilityModifier($wisdom);
+        $intelligenceMod = getAbilityModifier($intelligence);
+        $charismaMod = getAbilityModifier($charisma);
     
     $exNext = experienceNextLevel($level);
     
@@ -302,25 +311,86 @@
            ?>
        </span>
        
-       
-       
+<span id="strength">
+        <?php
+            echo $strength;
+            ?>
+        </span>
+
+        
+        <span id="strengthMod">
+        <?php
+            $strengthMod = getModSign($strengthMod);
+            echo $strengthMod;
+            ?>
+        </span>
+
+		<span id="dexterity">
+        <?php
+            echo $dexterity;
+            ?>
+        </span>
+
+          <span id="dexterityMod">
+        <?php
+            $dexterityMod = getModSign($dexterityMod);
+            echo $dexterityMod;
+            ?>
+        </span>
+
            
-		<span id="strength"></span>
-		<span id="dexterity"></span> 
-		<span id="constitution"></span> 
-		<span id="intelligence"></span>
-		<span id="wisdom"></span>
-       <span id="charisma"></span>
-       
-       
-           
-		<span id="strengthMod"></span>
-		<span id="dexterityMod"></span> 
-		<span id="constitutionMod"></span> 
-		<span id="intelligenceMod"></span>
-		<span id="wisdomMod"></span>
-       <span id="charismaMod"></span>
-		  
+		<span id="constitution">
+        <?php
+            echo $constitution;
+            ?>
+        </span>
+
+          <span id="constitutionMod">
+        <?php
+            $constitutionMod = getModSign($constitutionMod);
+            echo $constitutionMod;
+            ?>
+        </span>
+
+		<span id="wisdom">
+        <?php
+            echo $wisdom;
+            ?>
+        </span>
+
+         <span id="wisdomMod">
+        <?php
+            $wisdomMod = getModSign($wisdomMod);
+            echo $wisdomMod;
+            ?>
+        </span>
+
+		<span id="intelligence">
+        <?php
+            echo $intelligence;
+            ?>
+        </span>
+
+         <span id="intelligenceMod">
+        <?php
+            $intelligenceMod = getModSign($intelligenceMod);
+            echo $intelligenceMod;
+            ?>
+        </span>
+
+		<span id="charisma">
+        <?php
+            echo $charisma;
+            ?>
+        </span>
+
+         <span id="charismaMod">
+        <?php
+            $charismaMod = getModSign($charismaMod);
+            echo $charismaMod;
+            ?>
+        </span>
+
        
        <span id="race">
            <?php
