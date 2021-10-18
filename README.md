@@ -5,6 +5,12 @@ The White Box Fantastic Medieval Adventure Game Fighter Character Generator (ver
 --------------------
 
 
+
+Update 1.04: 2021-10-17
+
+Updates to fighter.php and abilityScoreGen.php. 
+
+
 Update 1.03: 2021-10-16
 
 New files added: nameSelect.php, surnames,php, givenNamesMale.php, givenNamesFemale.php and gender.php.  Updates to fighter.php, wb_fighter.css and fighter_character_sheet.png.
