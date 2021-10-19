@@ -374,9 +374,10 @@ body{
 
 #weaponsList{
     position:absolute;
-    top: 595px;
-    left: 305px;
-	font-size: 0.65em;
+    top: 355px;
+    left: 620px;
+	font-size: 0.8em;
+    width: 300px;
 }
 
 #weaponsList2{

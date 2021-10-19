@@ -199,15 +199,33 @@
         $weaponNames = array();
         $weaponDamage = array();
         $weaponWeight = array();
+
+        //For Random Select weapon
+        if(isset($_POST['thecheckBoxRandomWeaponsV2']) && $_POST['thecheckBoxRandomWeaponsV2'] == 1) 
+        {
+            $weaponArray = getRandomWeapons();
+
+        }
+        else
+        {
+            if(isset($_POST["theWeapons"]))
+            {
+                foreach($_POST["theWeapons"] as $weapon)
+                {
+                    array_push($weaponArray, $weapon);
+                }
+            }
+        }
+
     
-    
+    /*
         if(isset($_POST["theWeapons"]))
         {
             foreach($_POST["theWeapons"] as $weapon)
             {
                 array_push($weaponArray, $weapon);
             }
-        }
+        }*/
     
     foreach($weaponArray as $select)
     {
@@ -562,11 +580,27 @@
            $val1 = 0;
            $val2 = 0;
            $val3 = 0;
+
+           $count = count($weaponNames);
            
            foreach($weaponNames as $theWeapon)
            {
                echo $theWeapon;
-               echo "<br/>";
+               if($count > 2)
+               {
+                echo ", ";
+               }
+               else if($count === 2)
+               {
+                echo " & ";
+               }
+               else
+               {
+                echo ".";
+               }
+
+
+               --$count;
                $val1 = isWeaponTwoHanded($theWeapon, $val1);
                $val2 = isWeaponBastardSword($theWeapon, $val2);
            }
