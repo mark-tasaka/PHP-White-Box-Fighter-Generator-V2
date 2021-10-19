@@ -3,8 +3,8 @@
 
     function getWeapon($input)
     {
-        $a00 = array("Axe, battle", "", 15);
-        $a01 = array("Axe, hand", "", 5);
+        $a00 = array("Axe (battle)", "", 15);
+        $a01 = array("Axe (hand)", "", 5);
         $a02 = array("Club", "", 10);
         $a03 = array("Dagger", "", 2);
         $a04 = array("Flail", "", 15);
@@ -13,14 +13,14 @@
         $a07 = array("Polearm", "", 15);
         $a08 = array("Spear", "", 10);
         $a09 = array("Staff", "", 10);
-        $a10 = array("Sword, long", "", 10);
-        $a11 = array("Sword, short", "", 5);
-        $a12 = array("Sword, two-handed", "", 15);
+        $a10 = array("Sword (long)", "", 10);
+        $a11 = array("Sword (short)", "", 5);
+        $a12 = array("Sword (two-handed)", "", 15);
         $a13 = array("Warhammer", "", 10);
         $a14 = array("Bow, long", "", 5);
         $a15 = array("Bow, short", "", 5);
-        $a16 = array("Crossbow, heavy", "", 5);
-        $a17 = array("Crossbow, ligtht", "", 5);
+        $a16 = array("Crossbow (heavy)", "", 5);
+        $a17 = array("Crossbow (ligtht)", "", 5);
         $a18 = array("Sling", "", 1);
 
 
@@ -29,6 +29,37 @@
         return $array1[$input];
         
     }
+
+
+    
+function getRandomWeapons()
+{
+    $weaponsArray = array();
+
+    for($i = 0; $i <= 18; ++$i)
+    {
+        array_push($weaponsArray, $i);
+    }
+
+    //shuffle $weaponsArray
+    shuffle($weaponsArray); 
+
+    $numberOfWeapons = rand (3, 8);
+
+    $weaponsHas = array();
+
+    for($j = 0; $j < $numberOfWeapons; ++$j)
+    {
+        $weapon = $weaponsArray[$j];
+        
+        array_push($weaponsHas, $weapon);
+        
+    }
+
+    return $weaponsHas;
+}
+
+
 
 function isWeaponTwoHanded($input, $value)
 {
