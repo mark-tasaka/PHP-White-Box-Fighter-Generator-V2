@@ -216,23 +216,23 @@ body{
 
 #saveMatrix{
     position:absolute;
-    top: 830px;
-    left: 865px;
+    top: 1030px;
+    left: 690px;
 	font-size: 0.7em;
 }
 
 
 #saveMatrixDes{
     position:absolute;
-    top: 830px;
-    left: 700px;
+    top: 1030px;
+    left: 720px;
 	font-size: 0.7em;
 }
 
 #saveMatrixTitle{
     position:absolute;
-    top: 800px;
-    left: 735px;
+    top: 1005px;
+    left: 705px;
 	font-size: 0.8em;
 }
 
@@ -422,9 +422,10 @@ body{
 
 #gearList{
     position:absolute;
-    top: 560px;
-    left: 485px;
-	font-size: 0.6em;
+    top: 720px;
+    left: 660px;
+	font-size: 0.65em;
+    width: 250px;
 }
 
 #gearList2{

@@ -34,17 +34,13 @@
     
 function getRandomWeapons()
 {
-    $weaponsArray = array();
+    $weaponsArray = array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
 
-    for($i = 0; $i <= 18; ++$i)
-    {
-        array_push($weaponsArray, $i);
-    }
 
     //shuffle $weaponsArray
     shuffle($weaponsArray); 
 
-    $numberOfWeapons = rand (3, 6);
+    $numberOfWeapons = rand (2, 6);
 
     $weaponsHas = array();
 
@@ -55,6 +51,10 @@ function getRandomWeapons()
         array_push($weaponsHas, $weapon);
         
     }
+
+    $rangedWeapon = rand(14, 18);
+
+    array_push($weaponsHas, $rangedWeapon);
 
     return $weaponsHas;
 }

@@ -251,13 +251,46 @@
         $gearNames = array();
         $gearWeight = array();
     
-    
-        if(isset($_POST["theGear"]))
+        //For Random Select gear
+        if(isset($_POST['theCheckBoxRandomGear']) && $_POST['theCheckBoxRandomGear'] == 1) 
         {
-            foreach($_POST["theGear"] as $weapon)
+            $gearArray = getRandomGear();
+    
+            $weaponCount = count($weaponArray);
+    
+    
+            for($i = 0; $i < $weaponCount; ++$i)
             {
-                array_push($gearArray, $weapon);
+    
+                if($weaponArray[$i] == "14" || $weaponArray[$i] == "15" )
+                {
+                    array_push($gearArray, 33);
+                }
+
+                if($weaponArray[$i] == "16" || $weaponArray[$i] == "17" )
+                {
+                    array_push($gearArray, 35);
+                }
+    
+                if($weaponArray[$i] == "18")
+                {
+                    array_push($gearArray, 36);
+                }
+    
             }
+    
+        }
+        else
+        {
+            //For Manually select gear
+            if(isset($_POST["theGear"]))
+                {
+                    foreach($_POST["theGear"] as $gear)
+                    {
+                        array_push($gearArray, $gear);
+                    }
+                }
+    
         }
     
         foreach($gearArray as $select)
@@ -632,11 +665,28 @@
        <span id="gearList">
            <?php
            
-           foreach($gearNames as $theGear)
-           {
-              echo $theGear;
-               echo "<br/>";
-           }
+            $count = count($gearNames);
+                    
+            foreach($gearNames as $theGear)
+            {
+                echo $theGear;
+                if($count > 2)
+                {
+                echo ", ";
+                }
+                else if($count === 2)
+                {
+                echo " & ";
+                }
+                else
+                {
+                echo ".";
+                }
+
+                --$count;
+
+            }
+           
            ?>
        </span>
            
