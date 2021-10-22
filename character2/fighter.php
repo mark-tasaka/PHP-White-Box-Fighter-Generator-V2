@@ -36,6 +36,7 @@
     include 'php/abilityScoreGen.php';
     include 'php/nameSelect.php';
     include 'php/gender.php';
+    include 'php/hitPoints.php';
     
     
         if(isset($_POST["theCharacterName"]))
@@ -162,7 +163,11 @@
         $intelligenceMod = getAbilityModifier($intelligence);
         $charismaMod = getAbilityModifier($charisma);
     
-    $exNext = experienceNextLevel($level);
+        $exNext = experienceNextLevel($level);
+
+        $hitPoints = getHitPoints($level, $constitutionMod);
+
+        $hitDice = getHitDiceAmount($level);
     
 
     
@@ -486,9 +491,16 @@
        
        <span id="addLanguages"></span>
        
-       <span id="hitPoints"></span>
+       <span id="hitPoints">
+           <?php
+           echo $hitPoints;
+           ?>
+           </span>
        
-       <span id="hitDie"></span>
+       <span id="hitDie">
+           <?php
+           echo $hitDice;
+           ?></span>
        
        <span id="singleSave">
            <?php
@@ -743,7 +755,7 @@
        
        <span id="abilityScoreGeneration">
             <?php
-           echo $generationMessage;
+         //  echo $generationMessage;
            ?>
        </span>
        

@@ -202,9 +202,9 @@ body{
 
 #hitPoints{
     position:absolute;
-    top: 329px;
-    left: 290px;
-	font-size: 1.1em;
+    top: 405px;
+    left: 420px;
+	font-size: 1.3em;
 }
 
 #singleSave{
@@ -238,9 +238,9 @@ body{
 
 #hitDie{
     position:absolute;
-    top: 393px;
-    left: 265px;
-	font-size: 0.6em;
+    top: 482px;
+    left: 410px;
+	font-size: 1.3em;
 }
 
 
