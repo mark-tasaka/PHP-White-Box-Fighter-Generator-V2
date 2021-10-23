@@ -327,6 +327,17 @@
     $movementRate = moveRate ($totalWeightCarried, $characterRace);
     
     $thaco = thaco($level);
+
+    $meleeHitAC0 = $thaco - ($strengthMod);
+    $meleeHitAC1 = $thaco - ($strengthMod) - 1;
+    $meleeHitAC2 = $thaco - ($strengthMod) - 2;
+    $meleeHitAC3 = $thaco - ($strengthMod) - 3;
+    $meleeHitAC4 = $thaco - ($strengthMod) - 4;
+    $meleeHitAC5 = $thaco - ($strengthMod) - 5;
+    $meleeHitAC6 = $thaco - ($strengthMod) - 6;
+    $meleeHitAC7 = $thaco - ($strengthMod) - 7;
+    $meleeHitAC8 = $thaco - ($strengthMod) - 8;
+    $meleeHitAC9 = $thaco - ($strengthMod) - 9;
     
     $halflingBonus = missileBonusHalfling ($characterRace);
     
@@ -469,16 +480,57 @@
        </span>
        
        
-       <span id="meleeAc0"></span>
-       <span id="meleeAc1"></span>
-       <span id="meleeAc2"></span>
-       <span id="meleeAc3"></span>
-       <span id="meleeAc4"></span>
-       <span id="meleeAc5"></span>
-       <span id="meleeAc6"></span>
-       <span id="meleeAc7"></span>
-       <span id="meleeAc8"></span>
-       <span id="meleeAc9"></span>
+       <span id="meleeAc0">
+           <?php
+           echo $meleeHitAC0;
+           ?>
+       </span>
+
+       <span id="meleeAc1">
+           <?php
+           echo $meleeHitAC1;
+           ?></span>
+
+       <span id="meleeAc2">
+           <?php
+           echo $meleeHitAC2;
+           ?></span>
+
+       <span id="meleeAc3">
+       <?php
+           echo $meleeHitAC3;
+           ?>
+       </span>
+
+       <span id="meleeAc4">
+           <?php
+           echo $meleeHitAC4;
+           ?></span>
+
+       <span id="meleeAc5">
+           <?php
+           echo $meleeHitAC5;
+           ?></span>
+
+       <span id="meleeAc6">
+           <?php
+           echo $meleeHitAC6;
+           ?></span>
+
+       <span id="meleeAc7">
+           <?php
+           echo $meleeHitAC7;
+           ?></span>
+
+       <span id="meleeAc8">
+           <?php
+           echo $meleeHitAC8;
+           ?></span>
+
+       <span id="meleeAc9">
+           <?php
+           echo $meleeHitAC9;
+           ?></span>
        
        <span id="missileAttack"></span>
        
