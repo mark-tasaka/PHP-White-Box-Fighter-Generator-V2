@@ -37,6 +37,8 @@
     include 'php/nameSelect.php';
     include 'php/gender.php';
     include 'php/hitPoints.php';
+    include 'php/primeReq.php';
+    include 'php/classAbilities.php';
     
     
         if(isset($_POST["theCharacterName"]))
@@ -181,11 +183,14 @@
         $armourWeight = getArmour($armour)[2];
     
     
-        $totalAcDefense = $armourDefense;
         $totalArmourWeight =  $armourWeight;
     
         $armourDefense = removeZero($armourDefense);
         $armourWeight = removeZero($armourWeight);
+
+        
+       $descendingAc = 9 - $armourDefense - $dexterityMod;
+       $ascendingAc = 10 + $armourDefense + $dexterityMod;
     
     
         if(isset($_POST["theGold"]))
@@ -222,15 +227,7 @@
             }
         }
 
-    
-    /*
-        if(isset($_POST["theWeapons"]))
-        {
-            foreach($_POST["theWeapons"] as $weapon)
-            {
-                array_push($weaponArray, $weapon);
-            }
-        }*/
+
     
     foreach($weaponArray as $select)
     {
@@ -342,6 +339,12 @@
     $halflingBonus = missileBonusHalfling ($characterRace);
     
     $dwarfSaveMagic = dwarfSaveMod ($characterRace);
+
+    $exBonus = exBonus ($strength, $wisdom, $charisma);
+
+    $hirelings = hirelings($charisma);
+
+    $specialAbility = specialAbility();
     
     ?>
 
@@ -538,8 +541,16 @@
        <span id="fighterAbility"></span>
        
 
-       <span id="descendingAc"></span> 
-       <span id="ascendingAc"></span>
+       <span id="descendingAc">
+           <?php
+           echo $descendingAc;
+           ?>
+           </span> 
+
+       <span id="ascendingAc">
+           <?php
+           echo $ascendingAc;
+           ?></span>
        
        <span id="addLanguages"></span>
        
@@ -653,7 +664,11 @@
            ?>
         </span>
        
-       <span id="exBonus"></span>
+       <span id="exBonus">
+           <?php
+                echo $exBonus;
+           ?>
+       </span>
               
 
               
@@ -760,6 +775,8 @@
        <span id="totalWeightCarried">
            <?php
            echo "Weight carried: " . $totalWeightCarried . " lbs / Movement Rate: " . $movementRate;
+           echo '<br/>' . $hirelings;
+           echo '<br/>' . $specialAbility;
            ?>
        </span>
               
@@ -802,8 +819,6 @@
            echo $characterRaceTraits;
            ?>
        </span>
-       
-       <span id="hirelings"></span>
        
        <span id="abilityScoreGeneration">
             <?php

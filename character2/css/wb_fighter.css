@@ -188,16 +188,16 @@ body{
 
 #descendingAc{
     position:absolute;
-    top: 332px;
-    left: 85px;
-	font-size: 1.1em;
+    top: 345px;
+    left: 95px;
+	font-size: 1.8em;
 }
 
 #ascendingAc{
     position:absolute;
-    top: 332px;
-    left: 125px;
-	font-size: 1.1em;
+    top: 345px;
+    left: 165px;
+	font-size: 1.8em;
 }
 
 #hitPoints{
