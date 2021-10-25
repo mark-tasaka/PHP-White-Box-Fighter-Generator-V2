@@ -775,10 +775,17 @@
        <span id="totalWeightCarried">
            <?php
            echo "Weight carried: " . $totalWeightCarried . " lbs / Movement Rate: " . $movementRate;
-           echo '<br/>' . $hirelings;
-           echo '<br/>' . $specialAbility;
            ?>
        </span>
+
+              
+       <span id="specialAbility">
+           <?php
+           echo $specialAbility;
+           echo '<br/><br/>' . $hirelings;
+           ?>
+       </span>
+              
               
        
        <span id="wealth">

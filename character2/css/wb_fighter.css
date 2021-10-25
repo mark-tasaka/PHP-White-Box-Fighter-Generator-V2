@@ -450,19 +450,21 @@ body{
 	font-size: 0.6em;
 }
 
-#totalWeightCarried{
+
+#specialAbility{
     position:absolute;
-    top: 940px;
-    left: 95px;
-	font-size: 0.5em;
+    top: 715px;
+    left: 350px;
+	font-size: 0.6em;
+    width: 260px;
 }
 
-
-#hirelings{
+#totalWeightCarried{
     position:absolute;
-    top: 960px;
-    left: 95px;
-	font-size: 0.5em;
+    top: 850px;
+    left: 350px;
+	font-size: 0.6em;
+    width: 260px;
 }
 
 
@@ -536,9 +538,10 @@ body{
 
 #characterRaceTrait{
     position:absolute;
-    top: 1025px;
-    left: 95px;
-	font-size: 0.5em;
+    top: 800px;
+    left: 350px;
+	font-size: 0.65em;
+    width: 250px;
 }
 
 #addLanguages{
