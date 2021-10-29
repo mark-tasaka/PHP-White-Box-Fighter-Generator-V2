@@ -39,6 +39,7 @@
     include 'php/hitPoints.php';
     include 'php/primeReq.php';
     include 'php/classAbilities.php';
+    include 'php/addLanguages.php';
     
     
         if(isset($_POST["theCharacterName"]))
@@ -170,6 +171,8 @@
         $hitPoints = getHitPoints($level, $constitutionMod);
 
         $hitDice = getHitDiceAmount($level);
+
+        $languages = addLanguages($intelligence);
     
 
     
@@ -552,7 +555,11 @@
            echo $ascendingAc;
            ?></span>
        
-       <span id="addLanguages"></span>
+       <span id="addLanguages">
+           <?php
+           echo 'Common' . $languages;
+           ?></span>
+       </span>
        
        <span id="hitPoints">
            <?php
@@ -782,6 +789,7 @@
        <span id="specialAbility">
            <?php
            echo $specialAbility;
+           echo $characterRaceTraits;
            echo '<br/><br/>' . $hirelings;
            ?>
        </span>
@@ -820,12 +828,6 @@
        </span>
        
 
-       
-       <span id="characterRaceTrait">
-           <?php
-           echo $characterRaceTraits;
-           ?>
-       </span>
        
        <span id="abilityScoreGeneration">
             <?php

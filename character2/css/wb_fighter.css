@@ -546,9 +546,10 @@ body{
 
 #addLanguages{
     position:absolute;
-    top: 1125px;
-    left: 95px;
-	font-size: 0.6em;
+    top: 1135px;
+    left: 350px;
+	font-size: 0.75em;
+    width: 220px;
 }
 
 #fighterAbility{
