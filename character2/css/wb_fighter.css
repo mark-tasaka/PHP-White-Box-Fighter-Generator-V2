@@ -396,11 +396,19 @@ body{
 	font-size: 0.8em;
 }
 
+#totalWeaponWeight{
+    position:absolute;
+    top: 430px;
+    left: 735px;
+	font-size: 0.6em;
+}
+
+
 #totalArmourWeight{
     position:absolute;
-    top: 820px;
-    left: 305px;
-	font-size: 0.5em;
+    top: 520px;
+    left: 735px;
+	font-size: 0.6em;
 }
 
 #gearWeight{
@@ -461,8 +469,8 @@ body{
 
 #totalWeightCarried{
     position:absolute;
-    top: 850px;
-    left: 350px;
+    top: 1005px;
+    left: 650px;
 	font-size: 0.6em;
     width: 260px;
 }

@@ -6,15 +6,15 @@ function demiHumanTraits ($race)
     
     if($race === "Dwarf")
     {
-        $traits = ".<br/>FIGHTING GIANTS: Suffer 1/2 normal damage when figting giant-type creatures.<br/><br/>
+        $traits = "<br/><br/>FIGHTING GIANTS: Suffer 1/2 normal damage when figting giant-type creatures.<br/><br/>
         KEEN DETECTION: Spotting traps, slanting passages, constructs, etc. while
         underground (1-4 on d6 when searching; 1-2 passing by).<br/><br/>
         SAVING THROWS: +4 bonus for saving throws vs. magic.";
     }
     else if($race === "Elf")
     {
-        $traits = ".<br/>CHARACTER ADVANCEMENT: Able alterative between the fighter and magic-user
-        classes.<br/>.<br/>
+        $traits = "<br/><br/>CHARACTER ADVANCEMENT: Able alterative between the fighter and magic-user
+        classes.<br/><br/>
         HEREDITARY FOES: Gain +1 bonus to hit or damage against goblins, orcs,
         intelligent undead and lycanthropes.<br/><br/>
         KEEN DETECTION: Spotting hidden or concealed doors (1-4 on d6 when
@@ -22,7 +22,7 @@ function demiHumanTraits ($race)
     }
     else if($race === "Halfling")
     {
-        $traits = ".<br/>FIGHTING GIANTS: Suffer 1/2 normal damage when figting giant-type creatures.<br/><br/>
+        $traits = "<br/><br/>FIGHTING GIANTS: Suffer 1/2 normal damage when figting giant-type creatures.<br/><br/>
         DEADLY ACCURACY WITH MISSILES: +2 'to-Hit' when firing missile weapons.<br/><br/>
         NEAR INVISIBILITY: Difficult to spot when not engaged in combat.<br/><br/>
         SAVING THROWS: +4 bonus for saving throws vs. magic.";

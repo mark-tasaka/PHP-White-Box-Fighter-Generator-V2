@@ -677,21 +677,27 @@
            ?>
        </span>
               
-
+              
+       <span id="totalWeaponWeight">
+            <?php
+                echo "Weapon weight: " . $totalWeaponWeight . " lbs";
+            ?>
+       </span>
+       
               
        <span id="totalArmourWeight">
             <?php
-                echo "Total weapons/armour<br/>weight: " . $totalWeaponArmourWeight . " lbs";
+                echo "Armour weight: " . $totalArmourWeight . " lbs";
             ?>
        </span>
        
-       
+       <!--
                      
        <span id="gearWeight">
             <?php
-                echo "Total gear weight: " . $totalGearWeight . " lbs";
+          //      echo "Total gear weight: " . $totalGearWeight . " lbs";
             ?>
-       </span>
+       </span>-->
        
        
        <span id="weaponsList">
