@@ -469,8 +469,8 @@ body{
 
 #totalWeightCarried{
     position:absolute;
-    top: 1005px;
-    left: 650px;
+    top: 1145px;
+    left: 660px;
 	font-size: 0.6em;
     width: 260px;
 }
@@ -522,16 +522,16 @@ body{
 
 #wealth{
     position:absolute;
-    top: 530px;
-    left: 725px;
-	font-size: 0.6em;
+    top: 560px;
+    left: 625px;
+	font-size: 0.75em;
 }
 
 #coinWeight{
     position:absolute;
     top: 610px;
     left: 760px;
-	font-size: 0.5em;
+	font-size: 0.6em;
 }
 
 

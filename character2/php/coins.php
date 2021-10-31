@@ -13,5 +13,66 @@ function getCoins ($input)
 }
 
 
+function getGold($input)
+{
+        $coins = 0;
+        $numberOfDice = 0;
+        $dieType = 0;
+
+        if($input == 1 || $input == 2)
+        {
+                $dieType = 6;
+        }
+        else
+        {
+                $dieType = 20;
+        }
+
+        
+        if($input == 1)
+        {
+                $numberOfDice = 6;
+        }
+        else if($input == 2)
+        {
+                $numberOfDice = 12;
+        }
+        else
+        {
+                $numberOfDice = 10;
+        }
+
+        for($i = 0; $i < $numberOfDice; ++$i)
+        {
+                $gold = rand(1, $dieType);
+                $coins += $gold;
+        }
+
+        return $coins;
+}
+
+function getSilver($input)
+{
+        $coins = 0;
+        $numberOfDice = 0;
+        $dieType = 6;
+        
+        if($input == 1)
+        {
+                $numberOfDice = 6;
+        }
+        else
+        {
+                $numberOfDice = 3;
+        }
+
+        for($i = 0; $i < $numberOfDice; ++$i)
+        {
+                $silver = rand(1, $dieType);
+                $coins += $silver;
+        }
+
+        return $coins;
+}
 
 ?>

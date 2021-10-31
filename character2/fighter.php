@@ -200,12 +200,12 @@
         {
             $coins = $_POST["theGold"];
         }
-    
-        $coinQuantity = getCoins($coins)[0];
-        $coinType = getCoins($coins)[1];
-        $coinQuantity2 = getCoins($coins)[2];
-        $coinType2 = getCoins($coins)[3];
-    
+
+        $gold = getGold($coins);
+        $silver = getSilver($coins);
+
+        $coinWeight = $gold + $silver;
+        $coinWeight = (int)($coinWeight/10);
     
          
         $weaponArray = array();
@@ -317,7 +317,7 @@
     $totalWeaponArmourWeight = $totalArmourWeight + $totalWeaponWeight; 
     
     
-    $totalWeightCarried = $totalWeaponArmourWeight + $coinQuantity + $coinQuantity2 + $totalGearWeight;
+    $totalWeightCarried = $totalWeaponArmourWeight + $totalGearWeight + $coinWeight;
     
     $saveMatrix = savingThrowMatrix ($level);
 
@@ -673,21 +673,21 @@
        
        <span id="exBonus">
            <?php
-                echo $exBonus;
+                echo $exBonus . '%';
            ?>
        </span>
               
               
        <span id="totalWeaponWeight">
             <?php
-                echo "Weapon weight: " . $totalWeaponWeight . " lbs";
+                echo "Weapon weight: " . $totalWeaponWeight . " lb.";
             ?>
        </span>
        
               
        <span id="totalArmourWeight">
             <?php
-                echo "Armour weight: " . $totalArmourWeight . " lbs";
+                echo "Armour weight: " . $totalArmourWeight . " lb.";
             ?>
        </span>
        
@@ -804,32 +804,15 @@
        
        <span id="wealth">
            <?php
+
+           echo $gold . ' gold & ' . $silver . ' silver pieces';
            
-           if($coinQuantity === 0)
-           {
-               echo "";
-           }
-           else
-           {
-           echo ($coinQuantity * 10) . $coinType;
-           echo "<br/>";
-           echo ($coinQuantity2 * 10) . $coinType2;
-               
-           }
            ?>
        </span>
        
        <span id="coinWeight">
            <?php
-               
-           if($coinQuantity === 0)
-           {
-               echo "";
-           }
-           else
-           {
-                echo "Coin weight: " . ($coinQuantity+$coinQuantity2) . " lbs";
-           }
+               echo 'Coin weight: ' . $coinWeight . ' lb.';
            ?>
        </span>
        
