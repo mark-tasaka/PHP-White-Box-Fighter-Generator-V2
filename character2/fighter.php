@@ -140,6 +140,8 @@
             $abilityScoreGen = $_POST["theAbilityScore"];
         
         } 
+
+        $generationMesssage = generationMesssage($abilityScoreGen);
     
         
         $abilityScoreArray = array();
@@ -340,6 +342,8 @@
     $meleeHitAC9 = $thaco - ($strengthMod) - 9;
     
     $halflingBonus = missileBonusHalfling ($characterRace);
+
+    $missileAttack = $dexterityMod + $halflingBonus;
     
     $dwarfSaveMagic = dwarfSaveMod ($characterRace);
 
@@ -471,7 +475,11 @@
            ?>
        </span>
        
-       <span id="dieRollMethod"></span>
+       <span id="dieRollMethod">
+           <?php
+           echo $generationMesssage;
+           ?>
+       </span>
 
        
        <span id="class">Fighter</span>
@@ -538,7 +546,10 @@
            echo $meleeHitAC9;
            ?></span>
        
-       <span id="missileAttack"></span>
+       <span id="missileAttack">
+           <?php
+           echo 'Missile attack rolls: adjust to-Hit by ' .$missileAttack;
+           ?></span>
        
        
        <span id="fighterAbility"></span>
@@ -691,15 +702,7 @@
             ?>
        </span>
        
-       <!--
-                     
-       <span id="gearWeight">
-            <?php
-          //      echo "Total gear weight: " . $totalGearWeight . " lbs";
-            ?>
-       </span>-->
-       
-       
+
        <span id="weaponsList">
            <?php
            $val1 = 0;

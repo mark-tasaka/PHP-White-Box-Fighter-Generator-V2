@@ -261,13 +261,6 @@ body{
 
 
 
-#dieRollMethod{
-    position: absolute;
-    top: 870px;
-    left:  350px;
-	font-size: 0.5em;
-}
-
 
 /*White Box post data css*/
 
@@ -469,7 +462,7 @@ body{
 
 #totalWeightCarried{
     position:absolute;
-    top: 1145px;
+    top: 950px;
     left: 660px;
 	font-size: 0.6em;
     width: 260px;
@@ -640,9 +633,19 @@ body{
 
 #missileAttack{
     position:absolute;
-    top: 433px;
-    left: 610px;
+    top: 930px;
+    left: 660px;
 	font-size: 0.6em;
+    width: 260px;
+}
+
+
+#dieRollMethod{
+    position: absolute;
+    top: 1150px;
+    left: 660px;
+	font-size: 0.6em;
+    width: 260px;
 }
 
 

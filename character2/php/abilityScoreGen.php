@@ -34,40 +34,6 @@ function roll4D6()
 }
 
 
-function roll5D6()
-{
-    $abilityScores = 0;
-
-    $die1 = rand(1, 6);
-    $die2 = rand(1, 6);
-    $die3 = rand(1, 6);
-    $die4 = rand(1, 6);
-    $die5 = rand(1, 6);
-
-    $dieRollArray = array($die1, $die2, $die3, $die4, $die5);
-
-    rsort($dieRollArray);
-
-    for($i = 0; $i < 3; ++$i)
-    {
-        $abilityScores += $dieRollArray[$i];
-    }
-
-    return $abilityScores;
-
-}
-
-
-function rollD5D6D7()
-{
-    
-    $die1 = rand(1, 5);
-    $die2 = rand(1, 6);
-    $die3 = rand(1, 7);
-
-    return $die1 + $die2 + $die3;
-}
-
 
 function roll2D6Plus6()
 {
@@ -96,20 +62,9 @@ function rollAbilityScores($input)
         $abilityScores = roll4D6();
     }
 
-    //Roll 5d6, use the three highest
-    if($input == 3)
-    {
-        $abilityScores = roll5D6();
-    }
-    
-    //Roll 5d6, use the three highest
-    if($input == 4)
-    {
-        $abilityScores = rollD5D6D7();
-    }
     
     //Roll 2d6 + 6
-    if($input == 5)
+    if($input == 3)
     {
         $abilityScores = roll2D6Plus6();
     }
@@ -137,17 +92,6 @@ function generationMethod ($abilityScore)
         $dice = array(6, 2, 0, 6);
     }
     
-    if($abilityScore == 4)
-    {
-        $dice = array(8, 2, 0, 2);
-    }
-    
-    
-    if($abilityScore == 5)
-    {
-        $dice = array(7, 2, 0, 4);
-    }
-    
     return $dice;
 }
 
@@ -167,20 +111,10 @@ function generationMesssage ($abilityScore)
     
     if($abilityScore == 3)
     {
-        $message = "Ability Score Generation: 5d6, use the three highest rolls.";
+        $message = "Ability Score Generation: 2d6+6";
     }
     
-    if($abilityScore == 4)
-    {
-        $message = "Ability Score Generation: 1d5 + 1d6 + 1d7";
-    }
-    
-    
-    if($abilityScore == 5)
-    {
-        $message = "Ability Score Generation: 2d6 + 6";
-    }
-    
+
     return $message;
 }
 
