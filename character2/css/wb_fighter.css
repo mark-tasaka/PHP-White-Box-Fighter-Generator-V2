@@ -216,7 +216,7 @@ body{
 
 #saveMatrix{
     position:absolute;
-    top: 1030px;
+    top: 1010px;
     left: 690px;
 	font-size: 0.7em;
 }
@@ -224,14 +224,14 @@ body{
 
 #saveMatrixDes{
     position:absolute;
-    top: 1030px;
+    top: 1010px;
     left: 720px;
 	font-size: 0.7em;
 }
 
 #saveMatrixTitle{
     position:absolute;
-    top: 1005px;
+    top: 990px;
     left: 705px;
 	font-size: 0.8em;
 }
@@ -282,24 +282,25 @@ body{
 #playerName{
     position:absolute;
     top: 225px;
-    left: 430px;
-	font-size: 1em;
-}
-
-
-#level{
-    position:absolute;
-    top: 140px;
-    left: 375px;
+    left: 450px;
 	font-size: 1em;
 }
 
 
 
-#class{
+#gender{
     position:absolute;
     top: 140px;
-    left: 455px;
+    left: 370px;
+	font-size: 1em;
+}
+
+
+
+#alignment{
+    position:absolute;
+    top: 140px;
+    left: 465px;
 	font-size: 1em;
 }
 
@@ -312,10 +313,17 @@ body{
 }
 
 
-#alignment{
+#level{
     position:absolute;
     top: 225px;
     left: 250px;
+	font-size: 1em;
+}
+
+#class{
+    position:absolute;
+    top: 225px;
+    left: 310px;
 	font-size: 1em;
 }
 
@@ -644,10 +652,17 @@ body{
     position: absolute;
     top: 1150px;
     left: 660px;
-	font-size: 0.6em;
+	font-size: 0.55em;
     width: 260px;
 }
 
+#nameDescript{
+    position: absolute;
+    top: 1118px;
+    left: 660px;
+	font-size: 0.55em;
+    width: 260px;
+}
 
 
 

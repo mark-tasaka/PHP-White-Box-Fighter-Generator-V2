@@ -79,6 +79,8 @@
             $surname = $surname;
         }
 
+        $nameDescript = getNameDescript($givenName, $surname);
+
 
 
         if(isset($_POST['theCheckBoxCustomName']) && $_POST['theCheckBoxCustomName'] == 1) 
@@ -478,6 +480,12 @@
        <span id="dieRollMethod">
            <?php
            echo $generationMesssage;
+           ?>
+       </span>
+
+       <span id="nameDescript">
+           <?php
+           echo $nameDescript;
            ?>
        </span>
 
