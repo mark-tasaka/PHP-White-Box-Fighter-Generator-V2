@@ -1,9 +1,21 @@
 # PHP-White-Box-Fighter-Generator-V2
 The White Box Fantastic Medieval Adventure Game Fighter Character Generator (version 2) is the second iteration of the White Box Fighter Character Generator.
 
+--------------------
+
+
+Live version of the Fighter Character Generator (version 2) available at:
+
+https://www.oldschooladventures.org/whitebox/classes/fighter/
+
 
 --------------------
 
+
+
+Update 1.17: 2021-11-04
+
+Fixed minor bug in code.  Link to live version of the character generator added.
 
 
 Update 1.16: 2021-11-03
