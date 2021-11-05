@@ -79,16 +79,21 @@
             $surname = $surname;
         }
 
-        $nameDescript = getNameDescript($givenName, $surname);
+    //    $randomNameVal = 0;
 
 
 
-        if(isset($_POST['theCheckBoxCustomName']) && $_POST['theCheckBoxCustomName'] == 1) 
+        if(isset($_POST['theCheckBoxRandomName']) && $_POST['theCheckBoxRandomName'] == 1) 
         {
             $givenName = 200;
             $surname = 200;
             
+       //     $randomNameVal = 1;
+            
         } 
+        
+        $nameDescript = getNameDescript($givenName, $surname);
+
         
         if(isset($_POST["theGender"]))
         {
@@ -365,15 +370,15 @@
 
        
    <span id="characterName">
-           <?php
-                echo $characterName;
+           <?php 
+           echo $characterName;
            ?>
         </span>
 
                      
        <span id="characterName2">
-           <?php
-                echo $fullName;
+           <?php 
+            echo $fullName;
            ?>
         </span>
 
